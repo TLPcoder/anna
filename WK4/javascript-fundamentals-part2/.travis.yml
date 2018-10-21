@@ -1,0 +1,12 @@
+language: node_js
+
+node_js:
+  - "6"
+
+install:
+  - npm install -g phantomjs
+  - npm install -g mocha-phantomjs
+before_script:
+  - echo $PATH
+script:
+  - mocha-phantomjs part1/assignment.html
