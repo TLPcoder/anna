@@ -1,5 +1,5 @@
-Teaching ANNA Javascript/NODE/REACT/CS
+## Teaching ANNA Javascript/NODE/REACT/CS
 
-WK1 - command line
-WK2 - intro to GIT and github
-WK3 - intro to data types and vars
+<p>WK1 - command line</p>
+<p>WK2 - intro to GIT and github</p>
+<p>WK3 - intro to data types and vars</p>
