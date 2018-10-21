@@ -4,7 +4,7 @@
 //
 // Return the sum of these two arguments
 function sum(a, b) {
-  // return a + b;
+  return a + b;
 }
 
 // Define a function named product that takes two arguments
@@ -13,6 +13,7 @@ function sum(a, b) {
 //
 // Return the product of these two arguments
 function product(a, b) {
+  return a * b
   // YOUR CODE HERE
 }
 
@@ -26,7 +27,7 @@ function product(a, b) {
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Grouping
 function sumAndProduct(x, y, z) {
-
+    return (x + y) * z
 }
 
 // Define a function named averageMovieReview that takes three arguments
@@ -37,7 +38,7 @@ function sumAndProduct(x, y, z) {
 // Return the average of the three arguments. For example, given 2, 2, and 5,
 // then return 3.
 function averageMovieReview(rachel, roger, jake) {
-
+  return (rachel + roger + jake) / 3
 }
 
 // Define a function named weightedAverageMovieReview that takes three arguments
@@ -61,6 +62,7 @@ function averageMovieReview(rachel, roger, jake) {
 // = 5.0
 
 function weightedAverageMovieReview(rachel, roger, jake) {
+  return ((rachel * 0.25) + (roger * 1) + (jake * 2.2)) / (0.25 + 1.0 + 2.2)
 }
 
 // Define a function named roundUp that takes one argument
@@ -70,7 +72,7 @@ function weightedAverageMovieReview(rachel, roger, jake) {
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil
 function roundUp(decimal) {
-
+  return Math.ceil(decimal)
 }
 
 // Define a function named toFahrenheit that takes one argument
@@ -79,7 +81,9 @@ function roundUp(decimal) {
 // Return the argument converted to Fahrenheit rounded to the nearest integer.
 // Use Google to find the formula.
 
-
+function toFahrenheit(c) {
+  return Math.round((c * 9 / 5) + 32)
+}
 
 // Define a function named areaOfCircle that takes one argument
 //    radius (number)
@@ -139,7 +143,41 @@ function roundUp(decimal) {
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#switch_statement
 
+function toRoman(num) {
+  if (num < 1) {
+    return null
+  }
 
+  if (num > 10) {
+    return null
+  }
+
+  var newNum = num
+  var nums = [1, 5, 10]
+  var romans = ['I', 'V', 'X']
+  var romanNum = ''
+
+  while (newNum > 0) {
+    for (var i = nums.length - 1; i >= 0; i--) {
+      var currentNumber = nums[i]
+      var currentRoman = romans[i]
+
+      if (newNum + 1 === currentNumber) {
+        romanNum += 'I' + currentRoman
+        newNum -= currentNumber
+        break
+      }
+
+      if (newNum >= currentNumber) {
+        romanNum += currentRoman
+        newNum -= currentNumber
+        break
+      }
+    }
+  }
+
+  return  romanNum
+}
 
 // Define a function toDolla that takes one argument
 //    amount (number)

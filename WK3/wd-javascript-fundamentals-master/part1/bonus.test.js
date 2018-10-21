@@ -4,6 +4,7 @@ window.onload = function() {
 
   suite('caesarShiftInt', function() {
     test('throws an error if the number is less than 97', function() {
+      // console.log('caesarShiftInt', caesarShiftInt(50))
       assert.throws(caesarShiftInt.bind(null, 50), 'Error: integer too low');
       assert.throws(caesarShiftInt.bind(null, 90), 'Error: integer too low');
     });
@@ -81,6 +82,7 @@ window.onload = function() {
     });
 
     test('shifts a single uppercase character', function() {
+      console.log('caesarShiftChar(A)', caesarShiftChar('A'))
       assert.strictEqual(caesarShiftChar('A'), 'n');
       assert.strictEqual(caesarShiftChar('B'), 'o');
       assert.strictEqual(caesarShiftChar('C'), 'p');
